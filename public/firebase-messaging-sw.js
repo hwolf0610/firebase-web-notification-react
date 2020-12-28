@@ -46,6 +46,8 @@ messaging.setBackgroundMessageHandler(function(payload) {
   const notificationOptions = {
     body: payLoad.notification.body,
     icon: payLoad.notification.icon,
+    url: "https://fir-notification-react.web.app/",
+
   };
 
   return self.registration.showNotification(notificationTitle,
