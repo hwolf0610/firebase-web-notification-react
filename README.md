@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Firebase + React web push notification
+
+This project Demo URL [Firebase + React](https://fir-notification-react.web.app/).
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
