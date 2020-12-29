@@ -1,19 +1,24 @@
 import React from 'react'
 import axios from 'axios';
+import firebase from 'firebase';
+
 
 
 export default class PushMessaging extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            currentToken: '',
             title: '',
             body: '',
             receiveToken: 'cprTLQWxSD4:APA91bFFzprzjBdPxl0Te2Fom7ELtJ3xm5-MO3zKs7lE6HPQOEOAnjk6AUGFU0Mq5eGhhdPpvThjZS2IguTeiJaXE90_TqxBL-ZzkHOyLotIV2l2GOeYu78A9ctukGYA5RDZx--JP0Ch',
         }
     }
 
-    componentDidMount = () => {
-
+    async componentDidMount() {
+        this.setState({ currentToken: window.currentToken })
+        console.log("this.state.currentToken, componentDidMount:", this.state.currentToken)
+ 
     }
 
     onChangeNotificationTitle = (e) => {
@@ -61,8 +66,11 @@ export default class PushMessaging extends React.Component {
         return (
             <div className="App">
                 <p>
-                    Look24 :: Cloud Messaging Notification<br />{window.btoa(process.env.REACT_APP_API_KEY)}
+                    Look24 :: Cloud Messaging Notification<br /><br />
+                    currentToken = {this.state.currentToken}<br /><br />
+                    {window.btoa(process.env.REACT_APP_API_KEY)}
                 </p>
+                
                 Notification Title:<input type="text" onChange={this.onChangeNotificationTitle} /><br />
                 Notification Title:<input type="text" onChange={this.onChangeNotificationTitle} /><br />
                 Notification Receive Device Token:<input type="text" onChange={this.onChangeNotificationReceiveToken} /><br />

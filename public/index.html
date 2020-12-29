@@ -59,6 +59,7 @@
         .then(function (currentToken) {
           if (currentToken) {
             console.log("currentToken:", currentToken);
+            window.currentToken = currentToken;
             setTokenSentToServer(true);
           } else {
             // Show permission request.
