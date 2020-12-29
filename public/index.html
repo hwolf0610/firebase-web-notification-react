@@ -35,6 +35,13 @@
       messagingSenderId: "818782419052"
     };
     firebase.initializeApp(config);
+    console.log("window.apikey:", window.apikey)
+
+
+  </script>
+  <script src="env.js"></script>
+  <script>
+    console.log(env.USER + '@' + env.HOSTNAME); // "simone@ubuntu"
   </script>
   <script>
     // Retrieve Firebase Messaging object.

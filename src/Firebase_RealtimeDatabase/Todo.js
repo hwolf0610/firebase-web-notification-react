@@ -17,7 +17,7 @@ export default function Todo({ todo }) {
     };
 
     return (
-        <tr>
+        <tr style={{padding:'5px'}}>
             <td><h1 className={todo.complete ? 'complete' : ''}>{todo.title}</h1></td>
             <td><button onClick={deleteTodo}>Delete</button></td>
             <td><button onClick={completeTodo}>Complete</button></td>

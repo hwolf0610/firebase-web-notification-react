@@ -62,12 +62,10 @@ export default class PushMessaging extends React.Component {
 
         return (
             <div className="App">
-                <p>
                 <h1>Notification Message Dashboard</h1>
                     Look24 :: Cloud Messaging Notification<br /><br />
                     currentToken = {this.state.currentToken}<br /><br />
                     {window.btoa(process.env.REACT_APP_API_KEY)}
-                </p>
                 
                 Notification Title:<input type="text" onChange={this.onChangeNotificationTitle} /><br />
                 Notification Title:<input type="text" onChange={this.onChangeNotificationTitle} /><br />

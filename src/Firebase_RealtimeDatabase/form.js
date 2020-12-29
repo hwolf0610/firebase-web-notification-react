@@ -16,10 +16,23 @@ export default function Form() {
 
         todoRef.push(todo);
     };
+
+    // const createUsers = () => {
+    //     const todoRef = firebase.database().ref('MessagingUsers');
+    //     const todo = {
+    //         username:'noseted',
+    //         deviceToken:'null',
+    //         notificationStatus: false,
+    //     };
+
+    //     todoRef.push(todo);
+    // };
+
     return (
         <div>
             <input type="text" onChange={handleOnChange} value={title} />
             <button onClick={createTodo}>Add Todo</button>
+            {/* <button onClick={createUsers}>Add Firebase Message Users Realtime Database</button> */}
         </div>
     );
 }

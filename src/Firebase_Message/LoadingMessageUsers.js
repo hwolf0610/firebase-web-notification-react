@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import firebase from '../utils/firebase';
 import Todo from './Todo';
 
-export default function TodoList() {
+export default function LoadingMessageUsers() {
     const [todoList, setTodoList] = useState();
 
     useEffect(() => {
@@ -19,17 +19,15 @@ export default function TodoList() {
 
     return (
         <div>
-            <table border="1" width="100%"><thead>
+            <table border="1" width="100%">
                 <tr>
                     <td>Title</td>
                     <td>Delete Action</td>
                     <td>Complete Action</td>
-                </tr></thead>
-                <tbody>
-                    {todoList
-                        ? todoList.map((todo, index) => <Todo todo={todo} key={index} />)
-                        : ''}
-                </tbody>
+                </tr>
+                {todoList
+                    ? todoList.map((todo, index) => <Todo todo={todo} key={index} />)
+                    : ''}
             </table>
         </div>
 
