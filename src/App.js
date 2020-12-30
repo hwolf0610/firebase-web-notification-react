@@ -3,8 +3,6 @@ import './App.css';
 import React from 'react'
 import Routes from './Routes';
 
-import Form from './Firebase_RealtimeDatabase/form';
-import TodoList from './Firebase_RealtimeDatabase/TodoList';
 
 export default class App extends React.Component {
   componentDidMount = () => {
@@ -20,19 +18,8 @@ export default class App extends React.Component {
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
         </header>
-
         <hr />
         <Routes /> 
-
-        <hr />
-        <h1>Firebase Realtime Database CRUD Dashboard</h1>
-        <div >
-          <h1>Todo</h1>
-          <Form />
-          <TodoList />
-        </div>
-        <hr />
-
       </div>
     )
   }

@@ -1,12 +1,18 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import PushMessaging from "./Firebase_Message/PushMessaging";
+import Home from './Pages/Home'
+import FirebasePushNotification from "./Pages/FirebasePushNotification";
+import GoogleAuthentication from "./Pages/GoogleAuthentication";
+import FirebaseRealtimeDatabase from "./Pages/FirebaseRealtimeDatabase";
+
 const Routes = () => {
     return (
         <BrowserRouter>
             <Switch> 
-                <Route exact path='/' component={PushMessaging} />
-                <Route exact path='/PushMessaging' component={PushMessaging} />
+                <Route exact path='/' component={Home} />
+                <Route exact path='/FirebasePushNotification' component={FirebasePushNotification} />
+                <Route exact path='/GoogleAuthentication' component={GoogleAuthentication} />
+                <Route exact path='/FirebaseRealtimeDatabase' component={FirebaseRealtimeDatabase} />
             </Switch>
         </BrowserRouter>
     )
